@@ -15,7 +15,5 @@
       src: nodejs-shopping-cart.tar.gz
       dest: .
   - name: run the node js application
-    shell:
-      cmd: npm start
-      args:
-        executables: npm start
+    command: npm start
+      
