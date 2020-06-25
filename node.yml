@@ -13,10 +13,9 @@
   - name: unarchive the nodejs-shopping-cart tar file 
     unarchive:
       src: nodejs-shopping-cart.tar.gz
-      dest: /home/jenkins
-  - name: move to jenkins folder
-    shell: 
-      cmd: cd /home/jenkins
+      dest: .
   - name: run the node js application
     shell:
       cmd: npm start
+      args:
+        executables: npm start
