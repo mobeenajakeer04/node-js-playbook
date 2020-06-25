@@ -10,3 +10,7 @@
         - gcc-c++
         - make
       state: latest
+  - name: unarchive the nodejs-shopping-cart tar file 
+    unarchive:
+      src: nodejs-shopping-cart.tar.gz
+      dest: /home/jenkins
