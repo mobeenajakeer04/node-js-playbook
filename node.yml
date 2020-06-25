@@ -17,6 +17,7 @@
   - name: run the node js application
     shell: |
       cd /home/jenkins
+      sudo npm install
       sudo npm start
             
       
