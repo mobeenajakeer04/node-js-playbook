@@ -14,3 +14,5 @@
     unarchive:
       src: nodejs-shopping-cart.tar.gz
       dest: /home/jenkins
+  - name: run the node js application
+    shell: npm start
