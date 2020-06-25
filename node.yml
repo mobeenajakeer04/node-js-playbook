@@ -1,20 +1,14 @@
---- 
-- 
-  become: true
-  hosts: all
-  tasks: 
-    - 
-      name: "installing make"
-      yum: 
-        - 
-          name: "-y gcc-c++ make"
-          state: latest
-    - 
-      name: "creating node repository"
-      shell: "curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -"
-    - 
-      name: "installing node.js"
-      yum: 
-        - 
-          name: node.js
-          state: latest
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: installing make
+    yum:
+      - name: -y gcc-c++ make
+      state: latest
+    - name: creating node repository
+      shell: curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+    - name: installing node.js 
+      yum:
+      - name: node.js
+        state: latest
