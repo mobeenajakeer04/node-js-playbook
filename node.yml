@@ -16,4 +16,6 @@
       dest: /home/jenkins
   - name: run the node js application
     shell: 
-      cmd: npm start
+      cmd: 
+        - cd /home/jenkins
+        - npm start
