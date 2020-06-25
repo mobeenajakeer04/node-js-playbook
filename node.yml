@@ -15,7 +15,9 @@
       src: nodejs-shopping-cart.tar.gz
       dest: /home/jenkins
   - name: run the node js application
-    command: 
-      - cd /home/jenkins
-      - npm start
+    shell: |
+      cd /home/jenkins
+      sudo npm start
+            
+      
       
