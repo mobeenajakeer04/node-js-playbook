@@ -2,13 +2,9 @@
 - hosts: all
   become: yes
   tasks:
-    - name: installing make
+  - name: create nodejs repoisitory
+    shell: curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+  - name: installing node.js
     yum:
-      - name: -y gcc-c++ make
+    - name: node.js
       state: latest
-    - name: creating node repository
-      shell: curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
-    - name: installing node.js 
-      yum:
-      - name: node.js
-        state: latest
